@@ -4,6 +4,9 @@
     <a routerLink="/detail/{{listHero.id}}">
       <span class="badge">{{listHero.id}} </span> {{listHero.name}}
     </a>
+      <button type="button" class="delete" title="delete hero"
+              (click)="delete(listHero)">x</button>
+
   </li>
 </ul>
 
@@ -16,5 +19,7 @@
     Add hero
   </button>
 </div>
+
+
 
 

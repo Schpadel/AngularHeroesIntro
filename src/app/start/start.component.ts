@@ -26,5 +26,10 @@ export class StartComponent implements OnInit {
         this.heroes.push(hero);
       });
   }
+
+  delete(hero: Hero) {
+    this.heroes = this.heroes.filter(value => value !== hero);
+    this.heroService.deleteHero(hero.id).subscribe();
+  }
 }
 
